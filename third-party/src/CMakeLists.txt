@@ -1,2 +1,5 @@
 add_subdirectory (libevent-2.0.21-stable)
 add_subdirectory (gflags-2.1.1)
+add_subdirectory (glog-0.3.3)
+add_subdirectory (gtest-1.7.0)
+add_dependencies (glog gflags)
