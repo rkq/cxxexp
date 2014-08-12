@@ -1,0 +1,10 @@
+prefix=/home/rick/github/rkq/cxxexp/third-party
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libunwind-setjmp
+Description: libunwind setjmp library
+Version: 1.1
+Requires: libunwind
+Libs: -L${libdir} -lunwind-setjmp

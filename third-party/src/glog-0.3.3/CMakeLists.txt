@@ -7,4 +7,4 @@ add_library (glog
              src/symbolize.cc
              src/utilities.cc
              src/vlog_is_on.cc)
-target_link_libraries (glog gflags pthread)
+target_link_libraries (glog gflags pthread unwind)

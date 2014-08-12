@@ -11,13 +11,13 @@ set (CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} "-std=c++11")
 
 add_subdirectory (third-party)
 
-set (CXXEXP_THIRD_PARTY_SRC_DIR ${CXXEXP_SOURCE_DIR}/third-party/src)
-include_directories (${CXXEXP_THIRD_PARTY_SRC_DIR}/boost_1_56_0)
-include_directories (${CXXEXP_THIRD_PARTY_SRC_DIR}/libevent-2.0.21-stable/include)
-include_directories (${CXXEXP_THIRD_PARTY_SRC_DIR}/gflags-2.1.1/include)
-include_directories (${CXXEXP_THIRD_PARTY_SRC_DIR}/glog-0.3.3/include)
-include_directories (${CXXEXP_THIRD_PARTY_SRC_DIR}/gtest-1.7.0/include)
+set (CXXEXP_THIRD_PARTY_DIR ${CXXEXP_SOURCE_DIR}/third-party)
+include_directories (${CXXEXP_THIRD_PARTY_DIR}/src/boost_1_56_0)
+include_directories (${CXXEXP_THIRD_PARTY_DIR}/src/libevent-2.0.21-stable/include)
+include_directories (${CXXEXP_THIRD_PARTY_DIR}/src/gflags-2.1.1/include)
+include_directories (${CXXEXP_THIRD_PARTY_DIR}/src/glog-0.3.3/include)
+include_directories (${CXXEXP_THIRD_PARTY_DIR}/src/gtest-1.7.0/include)
 
-link_directories(${CMAKE_LIBRARY_OUTPUT_DIRECTORY} ${CMAKE_ARCHIVE_OUTPUT_DIRECTORY})
-
+link_directories (${CMAKE_LIBRARY_OUTPUT_DIRECTORY} ${CMAKE_ARCHIVE_OUTPUT_DIRECTORY})
+link_directories (${CXXEXP_THIRD_PARTY_DIR}/lib)
 add_subdirectory (topics)
