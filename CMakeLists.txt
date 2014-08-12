@@ -6,5 +6,7 @@ set (CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CXXEXP_SOURCE_DIR}/binary)
 set (CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CXXEXP_SOURCE_DIR}/binary)
 
 include_directories (${CXXEXP_SOURCE_DIR/third-party/src/boost_1_56_0})
+include_directories (${CXXEXP_SOURCE_DIR/third-party/src/libevent-2.0.21-stable/include})
+link_directories(${CMAKE_LIBRARY_OUTPUT_DIRECTORY} ${CMAKE_ARCHIVE_OUTPUT_DIRECTORY})
 add_subdirectory (third-party)
 add_subdirectory (topics)
