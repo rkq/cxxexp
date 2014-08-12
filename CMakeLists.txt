@@ -1,15 +1,18 @@
 cmake_minimum_required (VERSION 2.8.4)
 project (CXXEXP CXX C)
 set (CMAKE_VERBOSE_MAKEFILE true)
+
 set (CXXEXP_OUT_DIR ${CXXEXP_SOURCE_DIR}/binary)
-set (CXXEXP_THIRD_PARTY_INCLUDE_DIR ${CXXEXP_OUT_DIR}/include)
 set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CXXEXP_OUT_DIR}/bin)
 set (CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CXXEXP_OUT_DIR}/lib)
 set (CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CXXEXP_OUT_DIR}/lib)
+
 set (CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} "-std=c++11")
-include_directories (${CXXEXP_THIRD_PARTY_INCLUDE_DIR})
+
 include_directories (${CXXEXP_SOURCE_DIR/third-party/src/boost_1_56_0})
 include_directories (${CXXEXP_SOURCE_DIR/third-party/src/libevent-2.0.21-stable/include})
+include_directories (${CXXEXP_SOURCE_DIR/third-party/src/gflags-2.1.1/include})
+
 link_directories(${CMAKE_LIBRARY_OUTPUT_DIRECTORY} ${CMAKE_ARCHIVE_OUTPUT_DIRECTORY})
 add_subdirectory (third-party)
 add_subdirectory (topics)
