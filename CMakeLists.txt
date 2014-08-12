@@ -6,7 +6,7 @@ set (CXXEXP_THIRD_PARTY_INCLUDE_DIR ${CXXEXP_OUT_DIR}/include)
 set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CXXEXP_OUT_DIR}/bin)
 set (CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CXXEXP_OUT_DIR}/lib)
 set (CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CXXEXP_OUT_DIR}/lib)
-
+set (CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} "-std=c++11")
 include_directories (${CXXEXP_THIRD_PARTY_INCLUDE_DIR})
 include_directories (${CXXEXP_SOURCE_DIR/third-party/src/boost_1_56_0})
 include_directories (${CXXEXP_SOURCE_DIR/third-party/src/libevent-2.0.21-stable/include})
